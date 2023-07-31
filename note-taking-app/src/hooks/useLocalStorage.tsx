@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-// [ ] TS: the generic in here is kind of an argument
+// [ ] TS: the generic in here is works similar to a function argument
 export function useLocalStorage<T> (key: string, initialValue: T | (() => T)) {
 
     const [value, setValue] = useState<T>(() => {

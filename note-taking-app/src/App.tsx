@@ -4,10 +4,12 @@ import { Routes, Route, Navigate } from "react-router-dom"
 import { Container } from "react-bootstrap"
 import { useLocalStorage } from "./hooks/useLocalStorage"
 import { v4 as uuidV4 } from "uuid"
+
+import { NoteLayout } from "./layout/NoteLayout"
+
 import { NewNote } from "./pages/NewNote"
 import { NoteList } from "./pages/NoteList"
-import { NoteLayout } from "./layout/NoteLayout"
-import { NoteDisplay } from "./components/NoteDisplay"
+import { NoteDisplay } from "./pages/NoteDisplay"
 import { EditNote } from "./pages/EditNote"
 
 export type Tag = {
@@ -119,7 +121,8 @@ function App() {
             }
           />
 
-          {/* [ ] React: Nested Routes-Shared Layouts - https://blog.webdevsimplified.com/2022-07/react-router/#:~:text=handles%20shared%20layouts.-,Shared%20Layouts,-Let%E2%80%99s%20imagine%20that */}
+          {/* [ ] React: Nested Routes-Shared Layouts */}
+          {/* https://blog.webdevsimplified.com/2022-07/react-router/#:~:text=handles%20shared%20layouts.-,Shared%20Layouts,-Let%E2%80%99s%20imagine%20that */}
           <Route
             path="/:id"
             element={

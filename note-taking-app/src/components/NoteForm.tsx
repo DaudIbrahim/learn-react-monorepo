@@ -11,7 +11,7 @@ type NoteFormProps = {
     availableTags: Tag[]
 } & Partial<NoteData>
 
-// [ ] TS: note types in here | in Array Destructuring | in useRef<>
+// [ ] TS: types in function payload destructuring & generics in useRef<>, useState<>
 export function NoteForm({
     onSubmit,
     onAddTag,
@@ -68,7 +68,8 @@ export function NoteForm({
                                             label
                                         }
                                         onAddTag(newTag)
-                                        // [ ] React: Any time I need to compute new state based on previous state, I use a function update - https://kentcdodds.com/blog/use-state-lazy-initialization-and-function-updates#dispatch-function-updates
+                                        // [ ] React: Any time I need to compute new state based on previous state, I use a function update
+                                        // https://kentcdodds.com/blog/use-state-lazy-initialization-and-function-updates#dispatch-function-updates
                                         setSelectedTags(prev => [...prev, newTag])
                                     }}
                                     value={selectedTags.map(tag => {
