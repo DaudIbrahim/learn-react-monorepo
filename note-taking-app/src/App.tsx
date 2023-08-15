@@ -135,7 +135,7 @@ function App() {
             <Route
               index
               element={
-                < NoteDisplay
+                <NoteDisplay
                   onDelete={onDeleteNote}
                 />
               }
