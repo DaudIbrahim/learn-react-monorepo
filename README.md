@@ -1,8 +1,8 @@
 # Learn React Monorepo
 
-Bunch of React Project in a single repo
+**Multiple React projects consolidated within a single repository.**
 
-Create React Apps Using Vite
+*Create React Apps Using Vite*
 
 ```cmd
 npm create vite@latest
