@@ -32,6 +32,42 @@ React function components are an essential concept to understand when working wi
 
 Here's an example of a simple React function component:
 
+```jsx
+import React from 'react';
+
+function MyComponent(props) {
+  // No internal state, relying on props for data
+  return (
+    <div>
+      <h1>Hello, {props.name}!</h1>
+      <p>{props.message}</p>
+    </div>
+  );
+}
+```
+
+Using this function component is straightforward:
+
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+import MyComponent from './MyComponent';
+
+const App = () => {
+  return (
+    <div>
+      <MyComponent name="John" message="Welcome to React!" />
+    </div>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById('root'));
+```
+
+In the above example, we define a function component `MyComponent`, which takes `props` as its argument and renders a simple greeting message. We then use `MyComponent` within another function component `App`, passing in the desired `props`.
+
+Overall, function components provide a more modern and straightforward way to build React components and are preferred in most cases over class components due to their simplicity, readability, and better performance.
+
 ## Hooks
 
 [React Hooks Docs](https://react.dev/reference/react)
@@ -173,42 +209,6 @@ const Routes = () => {
 In this example, the `Dashboard` component will only be rendered if the user is authenticated; otherwise, they will be redirected to the `/login` route.
 
 By using higher-order components in this manner, you can create custom navigation guards to control the behavior of your React Router route components.
-
-```jsx
-import React from 'react';
-
-function MyComponent(props) {
-  // No internal state, relying on props for data
-  return (
-    <div>
-      <h1>Hello, {props.name}!</h1>
-      <p>{props.message}</p>
-    </div>
-  );
-}
-```
-
-Using this function component is straightforward:
-
-```jsx
-import React from 'react';
-import ReactDOM from 'react-dom';
-import MyComponent from './MyComponent';
-
-const App = () => {
-  return (
-    <div>
-      <MyComponent name="John" message="Welcome to React!" />
-    </div>
-  );
-};
-
-ReactDOM.render(<App />, document.getElementById('root'));
-```
-
-In the above example, we define a function component `MyComponent`, which takes `props` as its argument and renders a simple greeting message. We then use `MyComponent` within another function component `App`, passing in the desired `props`.
-
-Overall, function components provide a more modern and straightforward way to build React components and are preferred in most cases over class components due to their simplicity, readability, and better performance.
 
 ## Mobx
 
